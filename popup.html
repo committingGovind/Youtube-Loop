@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>YouTube Loop Extension</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="https://img.icons8.com/?size=100&id=BNOq7VkRUXSy&format=png&color=000000"
+    />
+    <style>
+      body {
+        width: 250px;
+        padding: 0px;
+        background-color: #222;
+        /* background: linear-gradient(to bottom, #222, #fe0001, black); */
+        color: seashell;
+        font-family: "Open Sans", sans-serif;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      input {
+        width: 50px;
+      }
+      h2 {
+        font-weight: lighter;
+        font-size: medium;
+      }
+      button {
+        margin-top: 10px;
+        border-radius: 5px;
+        background-color: #fe0001;
+        color: white;
+      }
+      .buttonClass {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #startTime {
+        border-radius: 5px;
+      }
+      #endTime {
+        border-radius: 5px;
+      }
+      .inputClass {
+        margin-left: 20px;
+        font-size: 15px;
+      }
+      .hoverClass {
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      .hoverClass:hover {
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="buttonClass">
+      <h2 style="display: flex; justify-items: center; align-items: center">
+        <span
+          ><img
+            style="
+              height: 25px;
+              width: 25px;
+              margin-right: 5px;
+              margin-top: 5px;
+            "
+            src="https://img.icons8.com/?size=100&id=19318&format=png&color=000000"
+        /></span>
+        Custom Video Looper
+      </h2>
+    </div>
+
+    <div class="inputClass">
+      <label style="margin-bottom: 5px"
+        >Loop Start (min:sec): <input type="text" id="startTime" min="0"
+      /></label>
+    </div>
+
+    <br />
+
+    <div class="inputClass">
+      <label
+        >Loop End (min:sec):
+        <input
+          style="margin-left: 5px; width: 50px"
+          type="text"
+          id="endTime"
+          min="0"
+      /></label>
+    </div>
+    <br />
+    <div class="buttonClass">
+      <button
+        class="hoverClass"
+        id="setLoop"
+        style="
+          padding: 3px;
+          font-family: monospace;
+          padding-left: 4px;
+          padding-right: 4px;
+        "
+      >
+        Set Loop
+      </button>
+      <button
+        class="hoverClass"
+        id="clearLoop"
+        style="margin-left: 4px; padding: 3px; font-family: monospace"
+      >
+        Clear Loop
+      </button>
+    </div>
+
+    <div class="buttonClass">
+      <button
+        style="background-color: royalblue; cursor: pointer"
+        id="donateButton"
+      >
+        Donate
+      </button>
+    </div>
+
+    <script src="pay.js"></script>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
